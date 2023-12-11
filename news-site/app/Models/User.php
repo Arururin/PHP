@@ -21,17 +21,17 @@ class User extends Authenticatable
         'password'
     ];
 
-    public function comments(): HasMany
+    public function comments()
     {
         return $this->hasMany(Comment::class);
     }
 
-    public function favs(): HasMany
+    public function favs()
     {
         return $this->hasMany(Fav::class);
     }
 
-    public function news(): HasMany
+    public function news()
     {
         return $this->hasMany(News::class);
     }

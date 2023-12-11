@@ -9,22 +9,22 @@ class News extends Model
 {
     use HasFactory;
 
-    public function author(): HasOne
+    public function author()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function category(): HasOne
+    public function category()
     {
         return $this->belongsTo(Category::class);
     }
 
-    public function favs(): HasMany
+    public function favs()
     {
         return $this->hasMany(Fav::class);
     }
 
-    public function comments(): HasMany
+    public function comments()
     {
         return $this->hasMany(Comment::class);
     }
